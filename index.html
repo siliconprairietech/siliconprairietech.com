@@ -37,6 +37,10 @@
         background: rgb(255, 182, 0);
     }
 
+    input {
+        color: rgb(255, 182, 0);
+    }
+
     footer {
         border-top: 1px solid #f39c12;
         font-size: .85em;
@@ -76,11 +80,11 @@
             <p><h2><a class="site-title" href="/">Silicon Prairie Tech</a></h2> is a group of chat channels for prairie-based developers, designers, marketers, business people, hobbyists, students, and other professionals involved in technology.</p>
             <p>It’s a common space for all to use and enjoy. We talk about the technologies we use, our successes and failures, job opportunities, and the latest cute animal GIFs.</p>
             <p>Put your best email address in the box below and our robots will send you an invitation.</p>
-            <form class="pure-form pure-form-aligned">
+            <form class="pure-form" method="post" action="invite">
                 <input type="hidden" id="lat" name="lat" value="">
                 <input type="hidden" id="lng" name="lng" value="">
                 <fieldset>
-                    <input type="email" placeholder="you@example.com">
+                    <input type="email" name="email" placeholder="you@example.com">
                     <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
                 </fieldset>
             </form>

@@ -1,0 +1,4 @@
+queue:
+- name: pin-queue
+  rate: 5/s
+  max_concurrent_requests: 1

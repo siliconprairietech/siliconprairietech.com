@@ -1,8 +1,15 @@
 application: siliconprairietech
-version: 1
 runtime: php55
+version: 1
 api_version: 1
 
 handlers:
-- url: /.*
+- url: /
   script: index.html
+- url: /invite$
+  script: invite.php
+- url: /add-pin$
+  script: add-pin.php
+  login: admin
+- url: /(.*)
+  script: \1
