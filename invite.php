@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($response === false) {
         // HTTP error
-        $signup_error = 'Whoops! An unexpected error occurred. Please contact the moderators for help.';
+        $alert = array('Whoops!', 'An unexpected error occurred. Please contact the moderators for help.', 'error', ':(');
     }
     else {
         $result = json_decode($response, true);
@@ -27,16 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 (new PushTask('/add-marker', ['latitude' => $latitude, 'longitude' => $longitude]))->add('marker-queue');
             }
 
-            $signup_message = 'Welcome friend! Check your email for your invitation!';
+            $alert = array('Celebrate Success!', 'Welcome friend! Check your email for your invitation!', 'success', 'Thanks!');
         }
         // {"ok":false,"error":"already_invited"}
         else {
             $error = $result['error'];
             if ($error === 'already_invited') {
-                $signup_error = 'Looks like you\'re already invited!';
+                $alert = array('Whoops!', 'Looks like you\'re already invited!', 'warning', 'Gotcha!');
+            }
+            elseif ($error === 'invalid_email') {
+                $alert = array('Whoops!', 'Check your email and try again.', 'error', 'Gotcha!');
             }
             else {
-                $signup_error = 'Whoops! An unexpected error occurred (' . $error . '). Please contact the moderators for help.';
+                $alert = array('Whoops!', 'An unexpected error occurred. Please contact the moderators for help. (' . $error . ')', 'error', ':(');
             }
         }
     }

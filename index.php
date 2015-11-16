@@ -72,6 +72,8 @@
         }
     </style>
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 </head>
 
 <body>
@@ -122,8 +124,13 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCy_StD5NXQgeJOTXDlNnyL38eF3neHB8&callback=initMap"></script>
 <script async defer src="markers.js"></script>
 <script type="text/javascript">(function () {
-    document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '" /></a>');
-})();</script>
+        document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '" /></a>');
+    })();</script>
+<?php
+if ($alert) {
+    echo "<script type=\"text/javascript\">$(function() {swal({title:\"{$alert[0]}\",text:\"{$alert[1]}\",type:\"{$alert[2]}\",confirmButtonColor:\"#0E6333\",confirmButtonText:\"{$alert[3]}\"});})</script>";
+}
+?>
 </body>
 
 </html>
