@@ -4,4 +4,9 @@ require_once('config.php');
 
 use google\appengine\api\cloud_storage\CloudStorageTools;
 
-CloudStorageTools::serve(MARKERS_JS);
+if (file_exists(MARKERS_JS)) {
+    CloudStorageTools::serve(MARKERS_JS);
+}
+else {
+    header('Content-type: application/javascript');
+}
