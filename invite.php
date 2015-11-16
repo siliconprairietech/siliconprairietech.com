@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $longitude = $_REQUEST['longitude'] ?: $appengine_longitude;
 
             if ($latitude && $longitude) {
-                (new PushTask('/add-pin', ['latitude' => $latitude, 'longitude' => $longitude]))->add('pin-queue');
+                (new PushTask('/add-marker', ['latitude' => $latitude, 'longitude' => $longitude]))->add('marker-queue');
             }
         }
         // {"ok":false,"error":"already_invited"}

@@ -6,12 +6,12 @@ api_version: 1
 handlers:
 - url: /
   script: index.html
-- url: /pins.js$
-  script: pins.php
+- url: /markers.js$
+  script: markers.php
 - url: /invite$
   script: invite.php
-- url: /add-pin$
-  script: add-pin.php
+- url: /add-marker
+  script: add-marker.php
   login: admin
 - url: /(.*)
   script: \1
