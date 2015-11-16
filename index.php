@@ -87,7 +87,7 @@
 
         <form class="pure-form" method="post" action="invite">
             <fieldset>
-                <input type="email" name="email" placeholder="you@example.com">
+                <input type="email" name="email" placeholder="you@example.com" value="<?= $_REQUEST['email'] ?>">
                 <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
             </fieldset>
             <input type="hidden" id="latitude" name="latitude" value="">
@@ -109,36 +109,14 @@
 <script type="text/javascript">
     var map;
     function initMap() {
-        var SUX = new google.maps.LatLng(42.535108, -96.411094);
         map = new google.maps.Map(document.getElementById('googlemaps'), {
-            center: SUX,
+            center: new google.maps.LatLng(<?= $_SERVER['HTTP_X_APPENGINE_CITYLATLONG'] ?: '42.535108, -96.411094' ?>),
             zoom: 5,
             disableDefaultUI: true,
             draggable: true,
             mapTypeId: google.maps.MapTypeId.TERRAIN,
             zoomControl: true
         });
-
-        if ("geolocation" in navigator) {
-            var you;
-            navigator.geolocation.watchPosition(function (position) {
-                var coords = position.coords;
-                var newPosition = new google.maps.LatLng(coords.latitude, coords.longitude);
-                $('#latitude').val(newPosition.lat());
-                $('#longitude').val(newPosition.lng());
-
-                if (you) {
-                    you.setPosition(newPosition);
-                }
-                else {
-                    you = new google.maps.Marker({
-                        map: map,
-                        position: newPosition,
-                        animation: google.maps.Animation.DROP
-                    });
-                }
-            });
-        }
     }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCy_StD5NXQgeJOTXDlNnyL38eF3neHB8&callback=initMap"></script>

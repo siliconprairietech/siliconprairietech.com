@@ -11,6 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($response === false) {
         // HTTP error
+        $signup_error = 'Whoops! An unexpected error occurred. Please contact the moderators for help.';
     }
     else {
         $result = json_decode($response, true);
@@ -25,12 +26,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             if ($latitude && $longitude) {
                 (new PushTask('/add-marker', ['latitude' => $latitude, 'longitude' => $longitude]))->add('marker-queue');
             }
+
+            $signup_message = 'Welcome friend! Check your email for your invitation!';
         }
         // {"ok":false,"error":"already_invited"}
         else {
             $error = $result['error'];
+            if ($error === 'already_invited') {
+                $signup_error = 'Looks like you\'re already invited!';
+            }
+            else {
+                $signup_error = 'Whoops! An unexpected error occurred (' . $error . '). Please contact the moderators for help.';
+            }
         }
     }
+
+    require_once('index.php');
+}
+else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+    require_once('index.php');
 }
 else {
     http_response_code(405); // Method Not Allowed

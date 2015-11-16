@@ -5,7 +5,7 @@ api_version: 1
 
 handlers:
 - url: /
-  script: index.html
+  script: index.php
 - url: /markers.js$
   script: markers.php
 - url: /invite$
