@@ -18,12 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         // {"ok":true}
         if ($result['ok'] === true) {
-            list($appengine_latitude, $appengine_longitude) = explode(',', $_SERVER['HTTP_X_APPENGINE_CITYLATLONG']);
-
-            $latitude = $_REQUEST['latitude'] ?: $appengine_latitude;
-            $longitude = $_REQUEST['longitude'] ?: $appengine_longitude;
-
-            if ($latitude && $longitude) {
+            list($latitude, $longitude) = explode(',', $_SERVER['HTTP_X_APPENGINE_CITYLATLONG']);
+            if (is_numeric($latitude) && is_numeric($longitude)) {
                 (new PushTask('/add-marker', ['latitude' => $latitude, 'longitude' => $longitude]))->add('marker-queue');
             }
 

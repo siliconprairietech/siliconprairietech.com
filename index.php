@@ -5,7 +5,6 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Silicon Prairie Tech</title>
-    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
@@ -99,8 +98,6 @@
                 <input type="email" name="email" placeholder="you@example.com" value="<?= $_REQUEST['email'] ?>">
                 <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
             </fieldset>
-            <input type="hidden" id="latitude" name="latitude" value="">
-            <input type="hidden" id="longitude" name="longitude" value="">
         </form>
     </div>
     <footer>
@@ -133,13 +130,9 @@
 <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCCy_StD5NXQgeJOTXDlNnyL38eF3neHB8&callback=initMap"></script>
 <script async defer src="markers.js"></script>
 <script type="text/javascript">(function () {
-        document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '" /></a>');
+        document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '"/></a>');
     })();</script>
-<?php
-if ($alert) {
-    echo "<script type=\"text/javascript\">$(function() {swal({title:\"{$alert[0]}\",text:\"{$alert[1]}\",type:\"{$alert[2]}\",confirmButtonColor:\"#0E6333\",confirmButtonText:\"{$alert[3]}\"});})</script>";
-}
-?>
+<script type="text/javascript"><?= $alert ? "(function() {swal({title:\"{$alert[0]}\",text:\"{$alert[1]}\",type:\"{$alert[2]}\",confirmButtonColor:\"#0E6333\",confirmButtonText:\"{$alert[3]}\"});})();" : '' ?></script>
 </body>
 
 </html>
