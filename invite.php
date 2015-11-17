@@ -27,16 +27,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 (new PushTask('/add-marker', ['latitude' => $latitude, 'longitude' => $longitude]))->add('marker-queue');
             }
 
-            $alert = array('Celebrate Success!', 'Welcome friend! Check your email for your invitation!', 'success', 'Thanks!');
+            $alert = array('Welcome friend!', 'Check your email for your invitation.', 'success', 'Thanks!');
         }
         // {"ok":false,"error":"already_invited"}
         else {
             $error = $result['error'];
             if ($error === 'already_invited') {
-                $alert = array('Whoops!', 'Looks like you\'re already invited!', 'warning', 'Gotcha!');
+                $alert = array('Whoops!', 'Looks like you\'re already invited.', 'warning', 'Cool!');
             }
             elseif ($error === 'invalid_email') {
                 $alert = array('Whoops!', 'Check your email and try again.', 'error', 'Gotcha!');
+            }
+            elseif ($error === 'already_in_team') {
+                $alert = array('Whoops!', 'Looks like you\'re already part of the team.', 'error', 'Nice!');
             }
             else {
                 $alert = array('Whoops!', 'An unexpected error occurred. Please contact the moderators for help. (' . $error . ')', 'error', ':(');
