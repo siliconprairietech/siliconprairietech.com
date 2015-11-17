@@ -9,6 +9,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.min.css">
     <style type="text/css" media="screen">
         html, body {
             height: 100%;
@@ -47,6 +48,11 @@
         footer {
             border-top: 1px solid #f39c12;
             font-size: .85em;
+        }
+
+        .mega-octicon {
+            width: 100%;
+            text-align: center;
         }
 
         #signupform {
@@ -106,6 +112,8 @@
 
         <p>This site and the auto-inviter are heavily influenced from the fine work done by the
             <a href="https://github.com/tech404">tech404 team</a>.</p>
+
+        <a href="https://github.com/siliconprairietech/siliconprairietech.com" target="_blank"><span class="mega-octicon octicon-mark-github"></span></a>
     </footer>
 </div>
 <div id="googlemaps"></div>
