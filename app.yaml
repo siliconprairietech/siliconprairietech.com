@@ -13,7 +13,5 @@ handlers:
 - url: /add-marker
   script: add-marker.php
   login: admin
-- url: /sweetalert-master
-  static_dir: sweetalert-master
 - url: /(.*)
   script: \1

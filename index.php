@@ -5,7 +5,10 @@
     <meta http-equiv="Content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Silicon Prairie Tech</title>
-    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+    <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <style type="text/css" media="screen">
         html, body {
             height: 100%;
@@ -71,9 +74,6 @@
             z-index: 0;
         }
     </style>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="sweetalert-master/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="sweetalert-master/dist/sweetalert.css">
 </head>
 
 <body>
@@ -83,6 +83,7 @@
 
         <h2><a class="site-title" href="/">Silicon Prairie Tech</a>
         </h2> is a group of chat channels for prairie-based developers, designers, marketers, business people, hobbyists, students, and other professionals involved in technology.</p>
+
         <p>It’s a common space for all to use and enjoy. We talk about the technologies we use, our successes and failures, job opportunities, and the latest cute animal GIFs.</p>
 
         <p>Put your best email address in the box below and our robots will send you an invitation.</p>
