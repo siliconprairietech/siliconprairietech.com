@@ -14,32 +14,31 @@
 
 <body>
 <div id="signupform">
-    <div class="description">
-        <h2><a class="site-title" href="/">Silicon Prairie Tech</a></h2>
+    <h2><a href="/">Silicon Prairie Tech</a></h2>
 
-        <p>is a group of chat channels for prairie-based developers, designers, marketers, business people, hobbyists, students, and other professionals involved in technology.</p>
+    <p>is a group of chat channels for prairie-based developers, designers, marketers, business people, hobbyists, students, and other professionals involved in technology.</p>
 
-        <p>It’s a common space for all to use and enjoy. We talk about the technologies we use, our successes and failures, job opportunities, and the latest cute animal GIFs.</p>
+    <p>It’s a common space for all to use and enjoy. We talk about the technologies we use, our successes and failures, job opportunities, and the latest cute animal GIFs.</p>
 
-        <p>Put your best email address in the box below and our robots will send you an invitation.</p>
+    <p>Put your best email address in the box below and our robots will send you an invitation.</p>
 
-        <form class="pure-form" method="post" action="invite">
-            <fieldset>
-                <input type="email" name="email" placeholder="you@example.com" value="{$smarty.request.email|default:''}">
-                <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
-            </fieldset>
-        </form>
-    </div>
+    <form class="pure-form" method="post" action="invite">
+        <fieldset>
+            <input type="email" name="email" placeholder="you@example.com" value="{$smarty.request.email|default:''}">
+            <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
+        </fieldset>
+    </form>
+
     <footer>
         <p>Silicon Prairie Tech runs on
-            <a href="https://slack.com">Slack</a>, a simple and easy way for people to stay connected. The current moderators are
-            <a href="https://twitter.com/geoffreyarnold">Geoff Arnold</a> and <a href="#">Sean Richardson</a>.</p>
+            <a href="https://slack.com" target="_blank">Slack</a>, a simple and easy way for people to stay connected. The current moderators are
+            <a href="https://twitter.com/geoffreyarnold" target="_blank">Geoff Arnold</a> and <a href="https://twitter.com/rxasean" target="_blank">Sean Richardson</a>.</p>
 
         <p>If you’d like to participate as an admin or to invite your group to the discussion, just ask one of them how to get involved.</p>
 
         <p>This site and the auto-inviter are heavily influenced from the fine work done by the
-            <a href="https://github.com/tech404">tech404 team</a>. Big high five to
-            <a href="https://twitter.com/michaelmase">Mike Mase</a> for the CSS love.</p>
+            <a href="https://github.com/tech404" target="_blank">tech404 team</a>. Big high five to
+            <a href="https://twitter.com/michaelmase" target="_blank">Mike Mase</a> for the CSS love.</p>
 
         <a href="https://github.com/siliconprairietech/siliconprairietech.com" target="_blank"><span class="mega-octicon octicon-mark-github"></span></a>
     </footer>
