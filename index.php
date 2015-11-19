@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.min.css">
     <style type="text/css" media="screen">
+        * {
+            box-sizing: border-box;
+        }
+
         html, body {
             height: 100%;
             margin: 0;
@@ -43,11 +47,13 @@
 
         input {
             color: rgb(255, 182, 0);
+            border: 0 !important;
         }
 
         footer {
             border-top: 1px solid #f39c12;
             font-size: .85em;
+            padding-bottom: 20px;
         }
 
         .mega-octicon {
@@ -57,27 +63,41 @@
 
         #signupform {
             height: 100%;
-            width: 475px;
+            width: 500px;
             top: 0;
             left: 0;
             position: absolute;
-            z-index: 1;
             padding: 20px;
             background: rgb(14, 99, 51);
             color: white;
             font-family: 'Lato', sans-serif;
             font-size: 21px;
             line-height: 1.35em;
-            text-align: justify;
+            overflow: auto;
         }
 
         #googlemaps {
             height: 100%;
-            width: 100%;
+            width: calc(100% - 500px);
+            float: right;
             top: 0;
-            left: 0;
-            position: relative;
-            z-index: 0;
+            right: 0;
+        }
+
+        @media only screen
+        and (max-width: 480px) {
+            #signupform {
+                width: auto;
+            }
+
+            input, button {
+                display: block;
+                width: 100%;
+            }
+
+            button {
+                margin-top: 0 !important;
+            }
         }
     </style>
 </head>
@@ -109,7 +129,8 @@
         <p>If you’d like to participate as an admin or to invite your group to the discussion, just ask one of them how to get involved.</p>
 
         <p>This site and the auto-inviter are heavily influenced from the fine work done by the
-            <a href="https://github.com/tech404">tech404 team</a>.</p>
+            <a href="https://github.com/tech404">tech404 team</a>. Huge thanks to
+            <a href="https://twitter.com/michaelmase">Mike Mase</a> for the CSS love.</p>
 
         <a href="https://github.com/siliconprairietech/siliconprairietech.com" target="_blank"><span class="mega-octicon octicon-mark-github"></span></a>
     </footer>
