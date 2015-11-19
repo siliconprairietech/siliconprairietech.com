@@ -10,6 +10,7 @@
         <option name="HTML_KEEP_BLANK_LINES" value="1" />
         <option name="HTML_ALIGN_ATTRIBUTES" value="false" />
         <option name="HTML_ELEMENTS_TO_REMOVE_NEW_LINE_BEFORE" value="" />
+        <option name="FORMATTER_TAGS_ENABLED" value="true" />
         <XML>
           <option name="XML_LEGACY_SETTINGS_IMPORTED" value="true" />
         </XML>

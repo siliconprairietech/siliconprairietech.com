@@ -1,2 +1,12 @@
+# IntelliJ
 .idea/workspace.xml
+
+# Composer
+vendor
+composer.phar
+
+# Smarty
+templates_c
+
+# Project
 config.php

@@ -1,8 +1,6 @@
 <?php
 
-require_once('config.php');
-
-use google\appengine\api\taskqueue\PushTask;
+require_once __DIR__ . '/config.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = ['email' => $_REQUEST['email'], 'token' => SLACK_TOKEN, 'set_active' => true];
@@ -43,10 +41,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 
-    require_once('index.php');
+    smarty()->assign('alert', $alert);
+    smarty()->display('index.tpl');
 }
 else if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-    require_once('index.php');
+    smarty()->display('index.tpl');
 }
 else {
     http_response_code(405); // Method Not Allowed

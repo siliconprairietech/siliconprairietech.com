@@ -4,14 +4,15 @@ version: 1
 api_version: 1
 
 handlers:
-- url: /
-  script: index.php
-- url: /markers.js$
-  script: markers.php
 - url: /invite$
   script: invite.php
-- url: /add-marker
+- url: /add-marker$
   script: add-marker.php
   login: admin
+- url: /markers.js$
+  script: markers.php
+- url: /styles.css$
+  static_files: styles.css
+  upload: styles.css
 - url: /(.*)
-  script: \1
+  script: index.php
