@@ -43,11 +43,13 @@
 
         input {
             color: rgb(255, 182, 0);
+            border: 0 !important;
         }
 
         footer {
             border-top: 1px solid #f39c12;
             font-size: .85em;
+            padding-bottom: 20px;
         }
 
         .mega-octicon {
@@ -68,7 +70,7 @@
             font-family: 'Lato', sans-serif;
             font-size: 21px;
             line-height: 1.35em;
-            text-align: justify;
+            overflow: auto;
         }
 
         #googlemaps {
@@ -78,6 +80,22 @@
             left: 0;
             position: relative;
             z-index: 0;
+        }
+
+        @media only screen
+            and (max-width: 480px) {
+                #signupform {
+                    width: auto;
+                }
+
+                input, button {
+                    display: block;
+                    width: 100%;
+                }
+
+                button {
+                    margin-top: 0 !important;
+                }
         }
     </style>
 </head>
