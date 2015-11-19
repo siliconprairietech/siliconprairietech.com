@@ -129,7 +129,8 @@
         <p>If you’d like to participate as an admin or to invite your group to the discussion, just ask one of them how to get involved.</p>
 
         <p>This site and the auto-inviter are heavily influenced from the fine work done by the
-            <a href="https://github.com/tech404">tech404 team</a>.</p>
+            <a href="https://github.com/tech404">tech404 team</a>. Huge thanks to
+            <a href="https://twitter.com/michaelmase">Mike Mase</a> for the CSS love.</p>
 
         <a href="https://github.com/siliconprairietech/siliconprairietech.com" target="_blank"><span class="mega-octicon octicon-mark-github"></span></a>
     </footer>
