@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/config.php';
 
+use google\appengine\api\taskqueue\PushTask;
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $data = ['email' => $_REQUEST['email'], 'token' => SLACK_TOKEN, 'set_active' => true];
     $context = ['http' => ['method' => 'post', 'content' => http_build_query($data)]];
