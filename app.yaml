@@ -1,7 +1,8 @@
-application: silicon-prairie-tech
 runtime: php55
-version: 1
 api_version: 1
+application: silicon-prairie-tech
+version: 1
+threadsafe: true
 
 handlers:
 - url: /invite$
