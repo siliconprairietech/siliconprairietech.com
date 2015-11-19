@@ -25,7 +25,7 @@
 
         <form class="pure-form" method="post" action="invite">
             <fieldset>
-                <input type="email" name="email" placeholder="you@example.com" value="{$smarty.request.email}">
+                <input type="email" name="email" placeholder="you@example.com" value="{$smarty.request.email|default:''}">
                 <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
             </fieldset>
         </form>
