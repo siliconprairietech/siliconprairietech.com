@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.min.css">
     <style type="text/css" media="screen">
+        * {
+            box-sizing: border-box;
+        }
+
         html, body {
             height: 100%;
             margin: 0;
@@ -59,11 +63,10 @@
 
         #signupform {
             height: 100%;
-            width: 475px;
+            width: 500px;
             top: 0;
             left: 0;
             position: absolute;
-            z-index: 1;
             padding: 20px;
             background: rgb(14, 99, 51);
             color: white;
@@ -75,27 +78,26 @@
 
         #googlemaps {
             height: 100%;
-            width: 100%;
+            width: calc(100% - 500px);
+            float: right;
             top: 0;
-            left: 0;
-            position: relative;
-            z-index: 0;
+            right: 0;
         }
 
         @media only screen
-            and (max-width: 480px) {
-                #signupform {
-                    width: auto;
-                }
+        and (max-width: 480px) {
+            #signupform {
+                width: auto;
+            }
 
-                input, button {
-                    display: block;
-                    width: 100%;
-                }
+            input, button {
+                display: block;
+                width: 100%;
+            }
 
-                button {
-                    margin-top: 0 !important;
-                }
+            button {
+                margin-top: 0 !important;
+            }
         }
     </style>
 </head>
