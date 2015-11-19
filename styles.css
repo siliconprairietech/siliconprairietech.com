@@ -1,0 +1,93 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: rgb(255, 182, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7f8c8d;
+}
+
+h2 {
+    display: inline;
+}
+
+h2 + p {
+    margin-top: 0;
+    display: inline;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+}
+
+form .invite-button {
+    border-radius: 4px;
+    background: rgb(255, 182, 0);
+}
+
+input {
+    color: rgb(255, 182, 0);
+    border: 0 !important;
+}
+
+footer {
+    border-top: 1px solid #f39c12;
+    font-size: .85em;
+    padding-bottom: 20px;
+}
+
+.mega-octicon {
+    width: 100%;
+    text-align: center;
+}
+
+#signupform {
+    height: 100%;
+    width: 500px;
+    top: 0;
+    left: 0;
+    position: absolute;
+    padding: 20px;
+    background: rgb(14, 99, 51);
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    line-height: 1.35em;
+    overflow: auto;
+}
+
+#googlemaps {
+    height: 100%;
+    width: calc(100% - 500px);
+    float: right;
+    top: 0;
+    right: 0;
+}
+
+@media only screen
+and (max-width: 480px) {
+    #signupform {
+        width: auto;
+    }
+
+    input, button {
+        display: block;
+        width: 100%;
+    }
+
+    button {
+        margin-top: 0 !important;
+    }
+}
