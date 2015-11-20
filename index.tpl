@@ -32,7 +32,8 @@
     <footer>
         <p>Silicon Prairie Tech runs on
             <a href="https://slack.com" target="_blank">Slack</a>, a simple and easy way for people to stay connected. The current moderators are
-            <a href="https://twitter.com/geoffreyarnold" target="_blank">Geoff Arnold</a> and <a href="https://twitter.com/rxasean" target="_blank">Sean Richardson</a>.</p>
+            <a href="https://twitter.com/geoffreyarnold" target="_blank">Geoff Arnold</a> and
+            <a href="https://twitter.com/rxasean" target="_blank">Sean Richardson</a>.</p>
 
         <p>If you’d like to participate as an admin or to invite your group to the discussion, just ask one of them how to get involved.</p>
 
@@ -58,11 +59,28 @@
     }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={$smarty.const.GOOGLE_MAPS_API_KEY}&callback=initMap"></script>
-<script async defer src="markers.js"></script>
-{*@formatter:off*}
-<script type="text/javascript">(function(){ldelim}document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '" /></a>');{rdelim})();</script>
-<script type="text/javascript">{if !empty($alert)}(function(){ldelim}swal({ldelim}title:"{$alert[0]}",text:"{$alert[1]}",type:"{$alert[2]}",confirmButtonColor:"#ffb600",confirmButtonText:"{$alert[3]}"{rdelim});{rdelim})();{/if}</script>
-{*@formatter:on*}
+<script async defer src="markers.js"></script> {*TODO move this init initMap() function*}
+<script type="text/javascript">
+    // @formatter:off
+    {literal}(function(){document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '" /></a>');})();{/literal}
+    // @formatter:on
+</script>
+<script type="text/javascript">
+    // @formatter:off
+    {if !empty($alert)}(function(){ldelim}swal({ldelim}title:"{$alert[0]}",text:"{$alert[1]}",type:"{$alert[2]}",confirmButtonColor:"#ffb600",confirmButtonText:"{$alert[3]}"{rdelim});{rdelim})();{/if}
+    // @formatter:on
+</script>
+<script>
+    // @formatter:off
+  {literal}(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');{/literal}
+
+  ga('create', '{$smarty.const.GOOGLE_ANALYTICS_TRACKING_ID}', 'auto');
+  ga('send', 'pageview');
+    // @formatter:on
+</script>
 </body>
 
 </html>
