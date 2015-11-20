@@ -56,10 +56,14 @@
             mapTypeId: google.maps.MapTypeId.TERRAIN,
             zoomControl: true
         });
+
+        var markers = document.createElement('script');
+        markers.async = 1;
+        markers.src = 'markers.js';
+        document.getElementsByTagName('head')[0].appendChild(markers);
     }
 </script>
 <script async defer src="https://maps.googleapis.com/maps/api/js?key={$smarty.const.GOOGLE_MAPS_API_KEY}&callback=initMap"></script>
-<script async defer src="markers.js"></script> {*TODO move this init initMap() function*}
 <script type="text/javascript">
     // @formatter:off
     {literal}(function(){document.write('<a style="display:block;overflow:hidden;z-index:9999;position:absolute;top:10px;right:10px;" href="http://siliconprairiebuilt.com/" target="_blank"><img src="http://siliconprairiebuilt.com/build.php?i=footer-orange-lg.png&s=' + window.location.host + '" /></a>');})();{/literal}
