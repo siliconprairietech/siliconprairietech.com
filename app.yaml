@@ -17,3 +17,15 @@ handlers:
   upload: styles.css
 - url: /(.*)
   script: index.php
+
+skip_files:
+# Default (https://cloud.google.com/appengine/docs/php/config/appconfig#PHP_app_yaml_Skipping_files)
+- ^(.*/)?#.*#$
+- ^(.*/)?.*~$
+- ^(.*/)?.*\.py[co]$
+- ^(.*/)?.*/RCS/.*$
+- ^(.*/)?\..*$
+# Custom
+- ^(.*/)?composer\..+$
+- ^(.*/)?README\.md$
+- ^(.*/)?.*\.sh$
