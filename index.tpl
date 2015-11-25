@@ -50,7 +50,7 @@
     function initMap() {
         map = new google.maps.Map(document.getElementById('googlemaps'), {
             center: new google.maps.LatLng({$smarty.server.HTTP_X_APPENGINE_CITYLATLONG|default:'42.535108, -96.411094'}),
-            zoom: 5,
+            zoom: 4,
             disableDefaultUI: true,
             draggable: true,
             mapTypeId: google.maps.MapTypeId.TERRAIN,
