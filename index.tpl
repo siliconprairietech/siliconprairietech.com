@@ -8,7 +8,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/octicons/3.3.0/octicons.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -41,7 +41,10 @@
             <a href="https://github.com/tech404" target="_blank">tech404 team</a>. Big high five to
             <a href="https://twitter.com/michaelmase" target="_blank">Mike Mase</a> for the CSS love.</p>
 
-        <a href="https://github.com/siliconprairietech/siliconprairietech.com" target="_blank"><span class="mega-octicon octicon-mark-github"></span></a>
+        <div id="links">
+            <a href="https://github.com/siliconprairietech" target="_blank"><span class="fa fa-github fa-2x"></span></a>
+            <a href="https://twitter.com/heyspt" target="_blank"><span class="fa fa-twitter fa-2x"></span></a>
+        </div>
     </footer>
 </div>
 <div id="googlemaps"></div>
