@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Silicon Prairie Tech</title>
     <script src="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+    <script src='//www.google.com/recaptcha/api.js'></script>
     <link rel="stylesheet" href="//cdn.jsdelivr.net/pure/0.6.0/pure-min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -27,6 +28,7 @@
             <input type="email" name="email" placeholder="you@example.com" value="{$smarty.request.email|default:''}">
             <button type="submit" class="pure-button pure-button-primary invite-button">Invite Me!</button>
         </fieldset>
+        <div class="g-recaptcha" data-sitekey="6Le_ZiUUAAAAAJOoPYmkXcwjSndlYxUITzRMYshk"></div>
     </form>
 
     <footer>
